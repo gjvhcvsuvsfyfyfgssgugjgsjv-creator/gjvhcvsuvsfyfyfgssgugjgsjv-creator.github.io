@@ -19,13 +19,27 @@
       --green: #1e9b72;
       --green-soft: #eaf7f1;
       --blue-soft: #eaf0ff;
+      --slide-width: 1280;
+      --slide-height: 720;
+      --slide-radius: 24px;
     }
     * { box-sizing: border-box; }
+    html, body { width: 100%; overflow-x: hidden; }
     body { margin: 0; background: #dfe4ec; font-family: "Inter","PingFang SC","Microsoft YaHei",sans-serif; color: var(--ink); }
-    .deck { display: flex; flex-direction: column; gap: 30px; padding: 28px 18px 52px; align-items: center; }
+    .deck { display: flex; flex-direction: column; gap: 30px; padding: 28px 18px 52px; align-items: center; width: 100%; }
+    .slide-frame {
+      width: min(1280px, calc(100vw - 36px));
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: visible;
+    }
     .slide {
-      width: 1280px; min-height: 720px; background: var(--bg); border-radius: 24px; position: relative;
+      width: 1280px; min-height: 720px; background: var(--bg); border-radius: var(--slide-radius); position: relative;
       box-shadow: 0 18px 48px rgba(24,34,52,.15); overflow: hidden; padding: 42px 54px 42px;
+      transform-origin: top center;
+      transform: scale(var(--scale, 1));
+      margin-bottom: calc((720px * var(--scale, 1)) - 720px);
     }
     .slide::before { content: "LUDIES TRAINING DECK"; position: absolute; left: 54px; top: 18px; font-size: 12px; letter-spacing: .18em; color: var(--mist); font-weight: 700; }
     .slide::after { content: "Shenzhen 188 · Unit 2"; position: absolute; right: 54px; top: 18px; font-size: 12px; color: var(--mist); }
@@ -81,11 +95,29 @@
     .cover-title { margin-top: 24px; font-size: 58px; line-height: 1.08; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
     .cover-desc { margin-top: 28px; color: #d6e0ee; font-size: 20px; line-height: 1.7; max-width: 560px; }
     .pill { display: inline-flex; align-items: center; margin-top: 42px; padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,.12); font-size: 13px; font-weight: 700; }
+
+    @media (max-width: 767px) {
+      body { background: #eef2f7; }
+      .deck { gap: 16px; padding: 12px 8px 28px; }
+      .slide-frame { width: calc(100vw - 16px); }
+      .slide {
+        --scale: calc((100vw - 16px) / 1280);
+        border-radius: 16px;
+        box-shadow: 0 10px 28px rgba(24,34,52,.12);
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      .slide-frame { width: calc(100vw - 36px); }
+      .slide {
+        --scale: calc((100vw - 36px) / 1280);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="deck">
-    <section class="slide cover">
+    <div class="slide-frame"><section class="slide cover">
       <div class="rule"></div>
       <div class="cover-band"></div><div class="cover-band-2"></div>
       <div class="cover-content">
@@ -95,9 +127,9 @@
         <div class="pill">Training Deck</div>
       </div>
       <div class="page" style="color:#d8dfec">01</div>
-    </section>
+    </section></div>
 
-    <section class="slide">
+    <div class="slide-frame"><section class="slide">
       <div class="rule"></div><div class="kicker">AGENDA</div><h1>培训内容结构</h1>
       <div class="sub">将原始28页培训材料，重组为适合汇报与讲解的成品表达。</div>
       <div class="grid-2">
@@ -109,11 +141,11 @@
         <div class="card"><div class="label">06</div><div><strong>培训结论</strong></div><div class="note">项目主卖点与销售使用方法</div></div>
       </div>
       <div class="footer">Training Use Only</div><div class="page">02</div>
-    </section>
+    </section></div>
 
-    <section class="slide section"><div class="rule"></div><div class="section-marker"></div><div class="section-wrap"><div class="section-tag">SECTION</div><div class="section-title">市场机会与产品定位</div><div class="section-desc">适用于培训宣导、价值表达、竞品对比与客户话术演绎。</div></div><div class="section-no">03</div></section>
+    <div class="slide-frame"><section class="slide section"><div class="rule"></div><div class="section-marker"></div><div class="section-wrap"><div class="section-tag">SECTION</div><div class="section-title">市场机会与产品定位</div><div class="section-desc">适用于培训宣导、价值表达、竞品对比与客户话术演绎。</div></div><div class="section-no">03</div></section></div>
 
-    <section class="slide">
+    <div class="slide-frame"><section class="slide">
       <div class="rule"></div><div class="kicker">EXECUTIVE SUMMARY</div><h1>一句话先讲清：本案的优势是“更低门槛买到更完整功能”</h1>
       <div class="sub">这是整份培训最该先被记住的总论。</div>
       <div class="metrics">
@@ -127,9 +159,9 @@
         <div class="card soft-gold"><div class="chart-title">培训提醒</div><ul class="list"><li>先讲门槛，再讲功能，最后讲场景。</li><li>不要陷入单价战。</li><li>不要只报赠送数字。</li></ul></div>
       </div>
       <div class="footer">Training Use Only</div><div class="page">04</div>
-    </section>
+    </section></div>
 
-    <section class="slide">
+    <div class="slide-frame"><section class="slide">
       <div class="rule"></div><div class="kicker">MARKET GAP</div><h1>区域市场缺什么：小面积低门槛，但要功能完整</h1>
       <div class="sub">原始材料的核心问题是：市场三房一卫多大、总价多少，本案核心优势是什么。</div>
       <div class="metrics">
@@ -143,7 +175,7 @@
         <div class="chart-box"><div class="chart-title">三房一卫主流面积门槛对比</div><div class="bar-area"><div class="bar" style="height:150px"><div class="bar-value">76</div><div class="bar-label">188</div></div><div class="bar gray" style="height:168px"><div class="bar-value">85</div><div class="bar-label">信义</div></div><div class="bar gray" style="height:162px"><div class="bar-value">82</div><div class="bar-label">乐宸</div></div><div class="bar gray" style="height:176px"><div class="bar-value">89</div><div class="bar-label">盛境</div></div><div class="bar gray" style="height:192px"><div class="bar-value">97</div><div class="bar-label">山河里</div></div></div></div>
       </div>
       <div class="footer">Training Use Only</div><div class="page">05</div>
-    </section>
+    </section></div>
 
     <section class="slide">
       <div class="rule"></div><div class="kicker">COMPETITION</div><h1>2单元与市场竞品的竞争格局</h1>
@@ -297,7 +329,7 @@
       <div style="position:absolute; right:120px; top:98px; width:250px; height:480px; background:var(--navy);"></div>
       <div style="position:absolute; right:172px; top:154px; width:128px; height:360px; background:rgba(201,141,43,.78);"></div>
       <div class="footer">Training Use Only</div><div class="page">21</div>
-    </section>
+    </section></div>
   </div>
 </body>
 </html>
