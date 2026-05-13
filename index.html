@@ -28,16 +28,17 @@
     body { margin: 0; background: #dfe4ec; font-family: "Inter","PingFang SC","Microsoft YaHei",sans-serif; color: var(--ink); }
     .deck { display: flex; flex-direction: column; gap: 30px; padding: 28px 18px 52px; align-items: center; width: 100%; }
     .slide-frame {
-      width: min(1280px, calc(100vw - 36px));
+      width: 1280px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       overflow: visible;
     }
     .slide {
-      width: 100%; min-height: 720px; background: var(--bg); border-radius: var(--slide-radius); position: relative;
+      width: 1280px; min-height: 720px; background: var(--bg); border-radius: var(--slide-radius); position: relative;
       box-shadow: 0 18px 48px rgba(24,34,52,.15); overflow: hidden; padding: 42px 54px 42px;
-      aspect-ratio: calc(var(--slide-width) / var(--slide-height));
+      flex: 0 0 1280px;
+      transform-origin: top center;
     }
     .slide::before { content: "LUDIES TRAINING DECK"; position: absolute; left: 54px; top: 18px; font-size: 12px; letter-spacing: .18em; color: var(--mist); font-weight: 700; }
     .slide::after { content: "Shenzhen 188 · Unit 2"; position: absolute; right: 54px; top: 18px; font-size: 12px; color: var(--mist); }
@@ -94,192 +95,13 @@
     .cover-desc { margin-top: 28px; color: #d6e0ee; font-size: 20px; line-height: 1.7; max-width: 560px; }
     .pill { display: inline-flex; align-items: center; margin-top: 42px; padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,.12); font-size: 13px; font-weight: 700; }
 
-    @media (max-width: 767px) {
-      body { background: #eef2f7; }
-      .deck { gap: 18px; padding: 12px 8px 28px; }
-      .slide-frame {
-        width: calc(100vw - 16px);
-        display: block;
-      }
-      .slide {
-        width: 100%;
-        min-height: auto;
-        aspect-ratio: auto;
-        border-radius: 16px;
-        box-shadow: 0 10px 28px rgba(24,34,52,.12);
-        padding: 22px 18px 22px;
-        overflow: hidden;
-      }
-      .slide::before,
-      .slide::after {
-        font-size: 10px;
-        top: 12px;
-      }
-      .slide::before { left: 18px; letter-spacing: .14em; }
-      .slide::after { right: 18px; }
-      .rule { left: 18px; right: 18px; top: 28px; }
-      .footer, .page {
-        position: static;
-        margin-top: 14px;
-        font-size: 11px;
-      }
-      .footer { display: inline-block; }
-      .page { float: right; }
-      .kicker {
-        margin-top: 26px;
-        font-size: 11px;
-        letter-spacing: .12em;
-      }
-      h1 {
-        font-size: clamp(24px, 7vw, 28px);
-        line-height: 1.2;
-        margin: 10px 0 10px;
-        word-break: break-word;
-      }
-      .sub {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 18px;
-      }
-      .grid-2, .grid-3, .grid-4, .metrics {
-        grid-template-columns: 1fr !important;
-        gap: 12px;
-      }
-      .deck .slide [style*="grid-template-columns"] {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-      }
-      .card {
-        border-radius: 14px;
-        padding: 16px 14px;
-      }
-      .label { font-size: 11px; }
-      .value { font-size: 28px; margin-top: 8px; }
-      .note,
-      .list,
-      table,
-      td,
-      th { font-size: 13px; }
-      .list { line-height: 1.65; }
-      .chart-title { font-size: 14px; }
-      .chart-box {
-        height: auto;
-        min-height: 220px;
-        padding: 14px 14px 18px;
-      }
-      .chart-box::before { left: 42px; right: 14px; bottom: 28px; }
-      .chart-box::after { left: 42px; top: 40px; bottom: 28px; }
-      .bar-area {
-        left: 56px;
-        right: 16px;
-        bottom: 28px;
-        height: 140px;
-        gap: 10px;
-      }
-      .bar { width: 24px; }
-      .bar-label,
-      .bar-value {
-        font-size: 9px;
-        white-space: normal;
-        width: 42px;
-        text-align: center;
-        line-height: 1.15;
-      }
-      .bar-label { bottom: -32px; }
-      .bar-value { top: -18px; }
-      .section-marker {
-        left: 18px;
-        top: 64px;
-        height: 120px;
-        width: 5px;
-      }
-      .section-wrap {
-        padding-left: 16px;
-        padding-top: 72px;
-      }
-      .section-tag {
-        font-size: 11px;
-        letter-spacing: .18em;
-      }
-      .section-title {
-        font-size: clamp(26px, 8vw, 30px);
-        max-width: none;
-        margin-top: 12px;
-        word-break: break-word;
-      }
-      .section-desc {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-top: 16px;
-        max-width: none;
-      }
-      .section-no {
-        right: 18px;
-        bottom: 18px;
-        font-size: 24px;
-      }
-      .cover-band {
-        width: 96px;
-        opacity: .9;
-      }
-      .cover-band-2 {
-        width: 56px;
-        right: 24px;
-        top: 52px;
-        bottom: 52px;
-      }
-      .cover-content {
-        width: 100%;
-        max-width: calc(100% - 72px);
-        padding-top: 64px;
-      }
-      .cover-kicker {
-        font-size: 11px;
-        letter-spacing: .14em;
-      }
-      .cover-title {
-        font-size: clamp(28px, 10vw, 32px);
-        line-height: 1.15;
-        word-break: break-word;
-      }
-      .cover-desc {
-        font-size: 14px;
-        line-height: 1.7;
-        max-width: calc(100% - 12px);
-        margin-top: 18px;
-      }
-      .pill {
-        margin-top: 20px;
-        padding: 8px 12px;
-        font-size: 11px;
-      }
-      .cover [style*="position:absolute"],
-      .slide > [style*="position:absolute"] {
-        max-width: 100%;
-      }
-      table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      tbody, thead, tr { white-space: nowrap; }
+    @media (max-width: 1320px) {
+      html, body { overflow-x: hidden; }
+      .deck { gap: 18px; padding: 12px 0 28px; }
+      .slide-frame { width: 100%; }
+      .slide { border-radius: 12px; }
     }
 
-    @media (min-width: 768px) and (max-width: 1279px) {
-      .deck { padding-inline: 16px; }
-      .slide-frame { width: min(100%, 1100px); }
-      .slide {
-        padding: 36px 40px 36px;
-      }
-      h1 { font-size: clamp(34px, 4vw, 44px); }
-      .cover-title,
-      .section-title { font-size: clamp(38px, 4.6vw, 52px); }
-      .metrics { grid-template-columns: repeat(2, 1fr); }
-      .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .value { font-size: 36px; }
-    }
   </style>
 </head>
 <body>
@@ -498,5 +320,25 @@
       <div class="footer">Training Use Only</div><div class="page">21</div>
     </section></div>
   </div>
+  <script>
+    (() => {
+      const BASE_WIDTH = 1280;
+      const fitSlides = () => {
+        const viewportWidth = document.documentElement.clientWidth || window.innerWidth;
+        const scale = Math.min(1, Math.max(0.24, (viewportWidth - 20) / BASE_WIDTH));
+        document.querySelectorAll(".slide-frame").forEach((frame) => {
+          const slide = frame.querySelector(".slide");
+          if (!slide) return;
+          slide.style.transform = `scale(${scale})`;
+          frame.style.width = `${BASE_WIDTH * scale}px`;
+          frame.style.height = `${slide.scrollHeight * scale}px`;
+        });
+      };
+      window.addEventListener("resize", fitSlides, { passive: true });
+      window.addEventListener("orientationchange", () => setTimeout(fitSlides, 120));
+      fitSlides();
+      window.addEventListener("load", fitSlides);
+    })();
+  </script>
 </body>
 </html>
