@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>深圳龙岗新世界188號5号地瑧悦2单元产品价值浅析（培训）-成品版</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --ink: #162237;
+      --navy: #1a2946;
+      --steel: #5d6b82;
+      --mist: #95a1b3;
+      --line: #d9dfea;
+      --accent: #c98d2b;
+      --accent-2: #e5be75;
+      --gold-soft: #fbf3e4;
+      --green: #1e9b72;
+      --green-soft: #eaf7f1;
+      --blue-soft: #eaf0ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #dfe4ec; font-family: "Inter","PingFang SC","Microsoft YaHei",sans-serif; color: var(--ink); }
+    .deck { display: flex; flex-direction: column; gap: 30px; padding: 28px 18px 52px; align-items: center; }
+    .slide {
+      width: 1280px; min-height: 720px; background: var(--bg); border-radius: 24px; position: relative;
+      box-shadow: 0 18px 48px rgba(24,34,52,.15); overflow: hidden; padding: 42px 54px 42px;
+    }
+    .slide::before { content: "LUDIES TRAINING DECK"; position: absolute; left: 54px; top: 18px; font-size: 12px; letter-spacing: .18em; color: var(--mist); font-weight: 700; }
+    .slide::after { content: "Shenzhen 188 · Unit 2"; position: absolute; right: 54px; top: 18px; font-size: 12px; color: var(--mist); }
+    .rule { position: absolute; left: 54px; right: 54px; top: 36px; height: 1px; background: var(--line); }
+    .footer { position: absolute; left: 58px; bottom: 22px; font-size: 12px; color: var(--mist); }
+    .page { position: absolute; right: 56px; bottom: 22px; font-size: 14px; color: var(--steel); font-weight: 700; }
+    .kicker { margin-top: 40px; font-size: 12px; letter-spacing: .14em; color: var(--accent); font-weight: 800; }
+    h1 { margin: 14px 0 12px; font-size: 48px; line-height: 1.08; letter-spacing: -.03em; font-family: Georgia, "Times New Roman", serif; }
+    .sub { color: var(--steel); font-size: 18px; margin-bottom: 26px; }
+    .grid-2, .grid-3, .grid-4, .metrics { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .metrics { grid-template-columns: repeat(4, 1fr); }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; box-shadow: 0 6px 18px rgba(33,46,74,.06); }
+    .soft-gold { background: var(--gold-soft); }
+    .soft-green { background: var(--green-soft); }
+    .soft-blue { background: var(--blue-soft); }
+    .label { font-size: 12px; color: var(--mist); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .value { margin-top: 12px; font-size: 42px; line-height: 1; font-weight: 800; letter-spacing: -.03em; }
+    .note { margin-top: 12px; font-size: 14px; line-height: 1.65; color: var(--steel); }
+    .list { margin: 0; padding-left: 20px; font-size: 16px; line-height: 1.7; color: var(--steel); }
+    .chart-box { height: 290px; border-radius: 18px; border: 1px solid var(--line); background: var(--panel); position: relative; padding: 18px 18px 12px; overflow: hidden; }
+    .chart-box::before { content: ""; position: absolute; left: 64px; right: 24px; bottom: 38px; height: 1px; background: var(--line); }
+    .chart-box::after { content: ""; position: absolute; left: 64px; top: 48px; bottom: 38px; width: 1px; background: var(--line); }
+    .chart-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+    .bar-area { position: absolute; left: 88px; right: 30px; bottom: 38px; height: 200px; display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; }
+    .bar { width: 42px; border-radius: 10px 10px 0 0; background: var(--accent); position: relative; }
+    .bar.gray { background: #aeb8ca; }
+    .bar.green { background: var(--green); }
+    .bar.blue { background: #415a85; }
+    .bar-label { position: absolute; left: 50%; transform: translateX(-50%); bottom: -24px; font-size: 11px; color: var(--steel); white-space: nowrap; }
+    .bar-value { position: absolute; left: 50%; transform: translateX(-50%); top: -22px; font-size: 11px; color: var(--steel); white-space: nowrap; }
+    .section { background: var(--navy); color: #fff; }
+    .section::before, .section::after { color: #d5dfef; }
+    .section .rule { background: rgba(255,255,255,.16); }
+    .section-marker { position: absolute; left: 56px; top: 90px; width: 7px; height: 460px; border-radius: 99px; background: var(--accent); }
+    .section-wrap { padding-left: 44px; padding-top: 124px; }
+    .section-tag { font-size: 15px; letter-spacing: .24em; color: #e7c98a; font-weight: 800; }
+    .section-title { margin-top: 18px; font-size: 54px; line-height: 1.08; max-width: 760px; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+    .section-desc { margin-top: 26px; color: #d8dfec; font-size: 20px; line-height: 1.7; max-width: 620px; }
+    .section-no { position: absolute; right: 68px; bottom: 48px; font-size: 52px; font-weight: 800; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: var(--navy); color: #fff; text-align: left; padding: 12px 14px; }
+    td { padding: 12px 14px; border-bottom: 1px solid var(--line); color: var(--steel); background: #fff; }
+    .cover { background: var(--navy); color: #fff; }
+    .cover::before, .cover::after { color: #d6dfec; }
+    .cover .rule { background: rgba(255,255,255,.16); }
+    .cover-band { position: absolute; top: 0; right: 0; width: 360px; height: 100%; background: #25385f; }
+    .cover-band-2 { position: absolute; top: 72px; right: 88px; width: 200px; bottom: 72px; background: #35507e; }
+    .cover-content { position: relative; width: 640px; padding-top: 112px; z-index: 2; }
+    .cover-kicker { color: #e7c98a; font-size: 13px; letter-spacing: .18em; font-weight: 800; }
+    .cover-title { margin-top: 24px; font-size: 58px; line-height: 1.08; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+    .cover-desc { margin-top: 28px; color: #d6e0ee; font-size: 20px; line-height: 1.7; max-width: 560px; }
+    .pill { display: inline-flex; align-items: center; margin-top: 42px; padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,.12); font-size: 13px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide cover">
+      <div class="rule"></div>
+      <div class="cover-band"></div><div class="cover-band-2"></div>
+      <div class="cover-content">
+        <div class="cover-kicker">LUDIES TRAINING</div>
+        <div class="cover-title">深圳龙岗新世界188號5号地<br>瑧悦2单元产品价值浅析</div>
+        <div class="cover-desc">培训版 · 围绕面积段、赠送价值、竞品对比、客户演绎话术进行重构表达。</div>
+        <div class="pill">Training Deck</div>
+      </div>
+      <div class="page" style="color:#d8dfec">01</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">AGENDA</div><h1>培训内容结构</h1>
+      <div class="sub">将原始28页培训材料，重组为适合汇报与讲解的成品表达。</div>
+      <div class="grid-2">
+        <div class="card"><div class="label">01</div><div><strong>市场机会</strong></div><div class="note">面积段与总价段的真实缺口</div></div>
+        <div class="card"><div class="label">02</div><div><strong>产品优势</strong></div><div class="note">面积、功能、使用率与总价门槛</div></div>
+        <div class="card"><div class="label">03</div><div><strong>赠送价值</strong></div><div class="note">赠送面积、使用率、竞品排名</div></div>
+        <div class="card"><div class="label">04</div><div><strong>分户型演绎</strong></div><div class="note">76 / 86 / 98 / 114 四大梯队</div></div>
+        <div class="card"><div class="label">05</div><div><strong>客户话术</strong></div><div class="note">痛点翻译、场景演绎、比较模板</div></div>
+        <div class="card"><div class="label">06</div><div><strong>培训结论</strong></div><div class="note">项目主卖点与销售使用方法</div></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">02</div>
+    </section>
+
+    <section class="slide section"><div class="rule"></div><div class="section-marker"></div><div class="section-wrap"><div class="section-tag">SECTION</div><div class="section-title">市场机会与产品定位</div><div class="section-desc">适用于培训宣导、价值表达、竞品对比与客户话术演绎。</div></div><div class="section-no">03</div></section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">EXECUTIVE SUMMARY</div><h1>一句话先讲清：本案的优势是“更低门槛买到更完整功能”</h1>
+      <div class="sub">这是整份培训最该先被记住的总论。</div>
+      <div class="metrics">
+        <div class="card soft-gold"><div class="label">三房一卫门槛</div><div class="value">76㎡</div><div class="note">本案 vs 竞品 85㎡起</div></div>
+        <div class="card soft-green"><div class="label">三房两卫门槛</div><div class="value">86㎡</div><div class="note">主流竞品 89–99㎡</div></div>
+        <div class="card soft-blue"><div class="label">四房门槛</div><div class="value">98㎡</div><div class="note">100㎡内稀缺四房</div></div>
+        <div class="card"><div class="label">改善套内</div><div class="value">91.9㎡</div><div class="note">114㎡改善四房</div></div>
+      </div>
+      <div class="grid-2" style="margin-top:20px;grid-template-columns:1.28fr 0.9fr;">
+        <div class="card"><div class="chart-title">结论框架</div><ul class="list"><li>对刚需：重点是少买面积、少付总价，但仍然真三房。</li><li>对首改：重点是更小面积就能做到三房两卫 / 四房。</li><li>对改善：重点是实际套内、景观与生活方式跃迁。</li></ul></div>
+        <div class="card soft-gold"><div class="chart-title">培训提醒</div><ul class="list"><li>先讲门槛，再讲功能，最后讲场景。</li><li>不要陷入单价战。</li><li>不要只报赠送数字。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">04</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">MARKET GAP</div><h1>区域市场缺什么：小面积低门槛，但要功能完整</h1>
+      <div class="sub">原始材料的核心问题是：市场三房一卫多大、总价多少，本案核心优势是什么。</div>
+      <div class="metrics">
+        <div class="card soft-blue"><div class="label">区域三房一卫</div><div class="value">85㎡起</div><div class="note">竞品主流面积</div></div>
+        <div class="card"><div class="label">竞品总价</div><div class="value">266–291万</div><div class="note">主流总价段</div></div>
+        <div class="card soft-gold"><div class="label">本案切入</div><div class="value">76㎡三房</div><div class="note">片区真产权三房</div></div>
+        <div class="card soft-green"><div class="label">竞争方式</div><div class="value">按房型比</div><div class="note">不是简单比单价</div></div>
+      </div>
+      <div class="grid-2" style="margin-top:20px;grid-template-columns:0.92fr 1.1fr;">
+        <div class="card"><div class="chart-title">结论提炼</div><ul class="list"><li>片区低总价刚需客户最需要的是“功能完整”而不是极限压缩。</li><li>本案用更小面积实现真三房/三房两卫/四房，直接压低上车门槛。</li><li>培训时建议优先讲“同功能少买多少面积、少付多少总价”。</li></ul></div>
+        <div class="chart-box"><div class="chart-title">三房一卫主流面积门槛对比</div><div class="bar-area"><div class="bar" style="height:150px"><div class="bar-value">76</div><div class="bar-label">188</div></div><div class="bar gray" style="height:168px"><div class="bar-value">85</div><div class="bar-label">信义</div></div><div class="bar gray" style="height:162px"><div class="bar-value">82</div><div class="bar-label">乐宸</div></div><div class="bar gray" style="height:176px"><div class="bar-value">89</div><div class="bar-label">盛境</div></div><div class="bar gray" style="height:192px"><div class="bar-value">97</div><div class="bar-label">山河里</div></div></div></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">05</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">COMPETITION</div><h1>2单元与市场竞品的竞争格局</h1>
+      <div class="sub">把源文件中多页竞品信息合并成面积段 × 功能 × 总价的讲解框架。</div>
+      <div style="display:grid;grid-template-columns:1.6fr 0.7fr;gap:18px;">
+        <div class="card"><table><thead><tr><th>面积段</th><th>本案产品</th><th>竞品主流</th><th>培训结论</th></tr></thead><tbody><tr><td>76㎡</td><td>3房1卫</td><td>85㎡左右3房1卫</td><td>更低总价门槛</td></tr><tr><td>86㎡</td><td>3房2卫</td><td>89–99㎡3房2卫</td><td>更小面积起步</td></tr><tr><td>98㎡</td><td>4房2卫</td><td>99㎡多为3房/少量4房</td><td>四房门槛更低</td></tr><tr><td>114㎡</td><td>改善4房2卫</td><td>113–117㎡4房2卫</td><td>空间与景观兼备</td></tr></tbody></table></div>
+        <div class="card"><div class="chart-title">销售提醒</div><ul class="list"><li>不建议只比单价。</li><li>优先按“同房型、同功能、同总价”比较。</li><li>让客户感知“少花钱买到完整居住功能”。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">06</div>
+    </section>
+
+    <section class="slide section"><div class="rule"></div><div class="section-marker"></div><div class="section-wrap"><div class="section-tag">SECTION</div><div class="section-title">赠送价值与使用率优势</div><div class="section-desc">把“赠送多少”升级成“赠送是否可用、是否值得客户感知”。</div></div><div class="section-no">07</div></section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">GIFT VALUE</div><h1>赠送价值不是“有多少”，而是“是否可用”</h1>
+      <div class="sub">源文件反复强调凸窗全赠送、设备平台全赠送、阳台半赠送。</div>
+      <div class="metrics">
+        <div class="card soft-gold"><div class="label">76A总赠送</div><div class="value">16.3㎡</div><div class="note">使用率 101.1%</div></div>
+        <div class="card soft-green"><div class="label">86A总赠送</div><div class="value">15.5㎡</div><div class="note">使用率 98.1%</div></div>
+        <div class="card soft-blue"><div class="label">98C总赠送</div><div class="value">16.7㎡</div><div class="note">使用率 97.8%</div></div>
+        <div class="card"><div class="label">114总赠送</div><div class="value">15.7㎡</div><div class="note">使用率 94.3%</div></div>
+      </div>
+      <div class="grid-2" style="margin-top:20px;grid-template-columns:1fr 1fr;">
+        <div class="chart-box"><div class="chart-title">总赠送面积对比</div><div class="bar-area"><div class="bar" style="height:180px"><div class="bar-value">16.3</div><div class="bar-label">76A</div></div><div class="bar green" style="height:171px"><div class="bar-value">15.5</div><div class="bar-label">86A</div></div><div class="bar blue" style="height:184px"><div class="bar-value">16.7</div><div class="bar-label">98C</div></div><div class="bar" style="height:174px;background:#e5be75"><div class="bar-value">15.8</div><div class="bar-label">98A</div></div><div class="bar gray" style="height:173px"><div class="bar-value">15.7</div><div class="bar-label">114</div></div></div></div>
+        <div class="card"><div class="chart-title">培训话术转译</div><ul class="list"><li>竞品很多赠送的是室外空间，本案更多是室内可感知、可利用空间。</li><li>客户问赠送时，不只报数字，要强调“房间凸窗 + 设备平台 + 阳台实际体验”。</li><li>真正关键是：同样建筑面积，室内用起来更大、更完整。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">08</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">USAGE RATE</div><h1>使用率表达：不要只讲百分比，要讲“少买多少公摊”</h1>
+      <div class="sub">原材料中的使用率数据，需要转译成客户听得懂的价值语言。</div>
+      <div class="grid-2" style="grid-template-columns:1.05fr 1fr;">
+        <div class="card"><div class="chart-title">建议转译方式</div><ul class="list"><li>76A 使用率 101.1%，重点不是数字夸张，而是“更少浪费在无效面积上”。</li><li>86A / 98C / 114 都应回到“同样预算下，室内真正能用的空间更多”。</li><li>讲使用率时，最好搭配套内面积或功能数量一起说。</li></ul></div>
+        <div class="chart-box"><div class="chart-title">市场口径使用率</div><div class="bar-area"><div class="bar" style="height:188px"><div class="bar-value">101.1</div><div class="bar-label">76A</div></div><div class="bar green" style="height:182px"><div class="bar-value">98.1</div><div class="bar-label">86A</div></div><div class="bar blue" style="height:181px"><div class="bar-value">97.8</div><div class="bar-label">98C</div></div><div class="bar" style="height:177px;background:#e5be75"><div class="bar-value">95.9</div><div class="bar-label">98A</div></div><div class="bar gray" style="height:174px"><div class="bar-value">94.3</div><div class="bar-label">114</div></div></div></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">09</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">SEGMENT RANKING</div><h1>按面积段看赠送与竞争力排名</h1>
+      <div class="sub">对应原材料第17–21页：不同面积段对比市场的赠送表现。</div>
+      <div class="grid-4">
+        <div class="card soft-blue"><div class="chart-title">76㎡</div><ul class="list"><li>面积较竞品小约10㎡</li><li>套内+赠送接近</li><li>低总价最强爆款</li></ul></div>
+        <div class="card soft-green"><div class="chart-title">86㎡</div><ul class="list"><li>2卫起步面积更小</li><li>赠送率最高</li><li>三代同堂痛点最明确</li></ul></div>
+        <div class="card soft-gold"><div class="chart-title">98㎡</div><ul class="list"><li>4房门槛低</li><li>仅少数竞品可正面对打</li><li>01/04定位不同场景</li></ul></div>
+        <div class="card"><div class="chart-title">114㎡</div><ul class="list"><li>改善尺度</li><li>仅乐宸115赠送略多</li><li>景观与套内优势并重</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">10</div>
+    </section>
+
+    <section class="slide section"><div class="rule"></div><div class="section-marker"></div><div class="section-wrap"><div class="section-tag">SECTION</div><div class="section-title">分户型价值表达</div><div class="section-desc">围绕 76 / 86 / 98 / 114 四大面积段重组为销售更易消化的结构。</div></div><div class="section-no">11</div></section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">76㎡ PRODUCT</div><h1>76㎡三房一卫：片区流量爆款与最低置业门槛</h1>
+      <div class="sub">对应原材料第7、8、23页。</div>
+      <div style="display:grid;grid-template-columns:1.05fr 0.75fr 0.85fr;gap:18px;">
+        <div class="card"><div class="chart-title">产品力关键词</div><ul class="list"><li>真产权三房，不是2+1的挤压型产品。</li><li>U型厨房 + 客餐厅一体化 + 客厅出阳台。</li><li>房间满开间凸窗 + 设备平台全赠送。</li><li>市场口径使用率 101.1%，爆款逻辑极强。</li></ul></div>
+        <div class="chart-box"><div class="chart-title">同类面积门槛</div><div class="bar-area"><div class="bar" style="height:150px"><div class="bar-value">76</div><div class="bar-label">188</div></div><div class="bar gray" style="height:168px"><div class="bar-value">85</div><div class="bar-label">信义</div></div><div class="bar gray" style="height:166px"><div class="bar-value">84</div><div class="bar-label">竞品均值</div></div></div></div>
+        <div class="card"><div class="chart-title">建议话术</div><ul class="list"><li>同样三房一卫，竞品通常要80–85㎡。</li><li>客户少买近10㎡，但仍得到完整三房功能。</li><li>重点引导“省下来的钱 + 真实可住的空间”。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">12</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">86㎡ PRODUCT</div><h1>86㎡三房两卫：把“多一个卫生间”放大成生活品质差异</h1>
+      <div class="sub">对应原材料第9、10、24页。</div>
+      <div style="display:grid;grid-template-columns:1.05fr 0.75fr 0.85fr;gap:18px;">
+        <div class="card soft-green"><div class="chart-title">核心卖点</div><ul class="list"><li>三房两卫起步面积更小，是片区同价位稀缺配置。</li><li>适配三代同堂 / 父母帮带娃的生活场景。</li><li>比90㎡+竞品更低总价，却多出关键功能。</li></ul></div>
+        <div class="chart-box"><div class="chart-title">三房两卫面积对比</div><div class="bar-area"><div class="bar green" style="height:166px"><div class="bar-value">86</div><div class="bar-label">188</div></div><div class="bar gray" style="height:160px"><div class="bar-value">83</div><div class="bar-label">乐宸</div></div><div class="bar gray" style="height:178px"><div class="bar-value">92</div><div class="bar-label">信义</div></div><div class="bar gray" style="height:192px"><div class="bar-value">99</div><div class="bar-label">盛境</div></div></div></div>
+        <div class="card"><div class="chart-title">话术翻译</div><ul class="list"><li>不是多一个卫生间而已，而是少掉每天抢厕所的压力。</li><li>节省出的总价差，可转化为装修、买车或教育基金。</li><li>对比76㎡，强调的是“功能全面升级”。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">13</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">98㎡ PRODUCT</div><h1>98㎡四房：既要功能数量，也要产品力与景观朝向分化</h1>
+      <div class="sub">对应原材料第11–14、25、26页。</div>
+      <div style="display:grid;grid-template-columns:1.08fr 1.08fr 0.84fr;gap:18px;">
+        <div class="card"><div class="chart-title">98㎡ 01户型：功能型四房</div><ul class="list"><li>南北通单翼 + 双阳台 + 独立玄关。</li><li>2单元唯一南北对流单位。</li><li>用不到100㎡的门槛做到4房2卫。</li></ul></div>
+        <div class="card soft-gold"><div class="chart-title">98㎡ 04户型：景观型四房</div><ul class="list"><li>东南朝向 + 主景观看学校与远山。</li><li>适合从“每天看到什么”切入。</li><li>把景观讲成生活画卷与情绪价值。</li></ul></div>
+        <div class="card"><div class="chart-title">讲法建议</div><ul class="list"><li>01讲产品力。</li><li>04讲景观和朝向。</li><li>两者都回到“100㎡以下买到四房”。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">14</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">114㎡ PRODUCT</div><h1>114㎡改善四房：从“多16㎡”升级为“生活方式进阶”</h1>
+      <div class="sub">对应原材料第15、16、27页。</div>
+      <div style="display:grid;grid-template-columns:1.02fr 0.76fr 0.9fr;gap:18px;">
+        <div class="card"><div class="chart-title">改善价值核心</div><ul class="list"><li>东南朝向，客厅约3.7m面宽，景观阳台尺度更完整。</li><li>房间与卫生间凸窗赠送，套内 91.9㎡。</li><li>不是“多一个房间”，而是多一份从容与层次。</li></ul></div>
+        <div class="chart-box"><div class="chart-title">套内面积对比</div><div class="bar-area"><div class="bar" style="height:186px"><div class="bar-value">91.9</div><div class="bar-label">188 114</div></div><div class="bar gray" style="height:180px"><div class="bar-value">89.1</div><div class="bar-label">信义</div></div><div class="bar gray" style="height:178px"><div class="bar-value">88.8</div><div class="bar-label">名居</div></div></div></div>
+        <div class="card soft-gold"><div class="chart-title">改善话术</div><ul class="list"><li>客户买的不是公摊面积，而是实际到手的套内空间。</li><li>同等空间下，本案可以买更小总价。</li><li>把270°生活画卷讲成未来生活方式。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">15</div>
+    </section>
+
+    <section class="slide section"><div class="rule"></div><div class="section-marker"></div><div class="section-wrap"><div class="section-tag">SECTION</div><div class="section-title">客户演绎与销售话术</div><div class="section-desc">从“讲户型”切换到“让客户感到值得买”。</div></div><div class="section-no">16</div></section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">SCENARIO SELLING</div><h1>把产品参数翻译成客户能感知的生活场景</h1>
+      <div class="sub">原材料第22–27页最有价值的部分，是把房型参数转成生活语境。</div>
+      <div class="grid-4">
+        <div class="card soft-blue"><div class="chart-title">刚需上车</div><ul class="list"><li>少买面积</li><li>更低总价</li><li>也能真三房</li></ul></div>
+        <div class="card soft-green"><div class="chart-title">家庭舒适</div><ul class="list"><li>多一个卫生间</li><li>早高峰不冲突</li><li>舒适感被放大</li></ul></div>
+        <div class="card soft-gold"><div class="chart-title">景观情绪</div><ul class="list"><li>清晨阳光</li><li>远山河景</li><li>城市烟火</li></ul></div>
+        <div class="card"><div class="chart-title">改善进阶</div><ul class="list"><li>尺度</li><li>层次</li><li>生活方式</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">17</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">TALK TRACK</div><h1>销售讲解推荐顺序</h1>
+      <div class="sub">让培训内容从“讲户型”升级为“带客户理解价值”。</div>
+      <div class="card" style="padding-top:24px;">
+        <table><tbody>
+          <tr><th style="width:80px;">01</th><th style="width:180px;">先锁定客户画像</th><td>刚需 / 首改 / 改善，不同客户优先强调不同价值。</td></tr>
+          <tr><th>02</th><th>再讲同类门槛</th><td>同样功能，客户在本案少买多少面积、少付多少总价。</td></tr>
+          <tr><th>03</th><th>补充赠送逻辑</th><td>把赠送解释为“更可用的室内空间”，不是单纯数字。</td></tr>
+          <tr><th>04</th><th>最后落到场景</th><td>把朝向、景观、卫生间、玄关翻译成具体生活画面。</td></tr>
+        </tbody></table>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">18</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">CUSTOMER OBJECTION</div><h1>常见客户问题，建议这样接</h1>
+      <div class="sub">把培训材料进一步沉淀成一线可直接使用的话术模板。</div>
+      <div class="card"><table><thead><tr><th style="width:260px;">客户问题</th><th>建议回答</th></tr></thead><tbody>
+        <tr><td>为什么面积小？</td><td>因为本案把户型效率做高了，同样功能不需要买更大的建筑面积。</td></tr>
+        <tr><td>赠送到底多不多？</td><td>不只看数字，更重要是赠送到室内可用空间，而不是难利用的室外空间。</td></tr>
+        <tr><td>为什么单价不一定最低？</td><td>因为真正要比较的是总价门槛、功能完整度和实际套内体验。</td></tr>
+        <tr><td>98㎡为什么值得买？</td><td>100㎡内做到四房，本身就稀缺；再叠加产品力或景观优势，竞争力更强。</td></tr>
+      </tbody></table></div>
+      <div class="footer">Training Use Only</div><div class="page">19</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">SUMMARY</div><h1>培训结论：本案不是单纯“面积小”，而是“功能更完整，门槛更低”</h1>
+      <div class="sub">把28页材料压缩成销售最该记住的四句话。</div>
+      <div class="grid-2">
+        <div class="card soft-gold"><ul class="list"><li>76㎡是真产权三房爆款，解决刚需上车门槛。</li><li>86㎡用更小面积做到三房两卫，解决家庭生活痛点。</li><li>98㎡把四房门槛压到100㎡以内，还能拆成功能型与景观型。</li><li>114㎡改善户型用套内与景观，建立品质跃迁感。</li></ul></div>
+        <div class="card"><div class="chart-title">培训使用提醒</div><ul class="list"><li>按房型比，不按单价硬比。</li><li>讲赠送，要讲“是否可用”。</li><li>讲景观，要讲成生活画面。</li><li>讲改善，要讲到实际到手空间。</li></ul></div>
+      </div>
+      <div class="footer">Training Use Only</div><div class="page">20</div>
+    </section>
+
+    <section class="slide">
+      <div class="rule"></div><div class="kicker">THANK YOU</div><h1>感谢聆听</h1>
+      <div class="sub">深圳龙岗新世界188號5号地瑧悦2单元产品价值浅析（培训）</div>
+      <div style="position:absolute; right:120px; top:98px; width:250px; height:480px; background:var(--navy);"></div>
+      <div style="position:absolute; right:172px; top:154px; width:128px; height:360px; background:rgba(201,141,43,.78);"></div>
+      <div class="footer">Training Use Only</div><div class="page">21</div>
+    </section>
+  </div>
+</body>
+</html>
