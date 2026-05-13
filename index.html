@@ -98,13 +98,172 @@
 
     @media (max-width: 767px) {
       body { background: #eef2f7; }
-      .deck { gap: 16px; padding: 12px 8px 28px; }
-      .slide-frame { width: calc(100vw - 16px); }
+      .deck { gap: 18px; padding: 12px 8px 28px; }
+      .slide-frame {
+        width: calc(100vw - 16px);
+        display: block;
+      }
       .slide {
-        --scale: calc((100vw - 16px) / 1280);
+        width: 100%;
+        min-height: auto;
+        transform: none;
+        margin-bottom: 0;
         border-radius: 16px;
         box-shadow: 0 10px 28px rgba(24,34,52,.12);
+        padding: 22px 18px 22px;
+        overflow: visible;
       }
+      .slide::before,
+      .slide::after {
+        font-size: 10px;
+        top: 12px;
+      }
+      .slide::before { left: 18px; letter-spacing: .14em; }
+      .slide::after { right: 18px; }
+      .rule { left: 18px; right: 18px; top: 28px; }
+      .footer, .page {
+        position: static;
+        margin-top: 14px;
+        font-size: 11px;
+      }
+      .footer { display: inline-block; }
+      .page { float: right; }
+      .kicker {
+        margin-top: 26px;
+        font-size: 11px;
+        letter-spacing: .12em;
+      }
+      h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin: 10px 0 10px;
+      }
+      .sub {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+      }
+      .grid-2, .grid-3, .grid-4, .metrics {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+      }
+      .deck .slide [style*="grid-template-columns"] {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      .card {
+        border-radius: 14px;
+        padding: 16px 14px;
+      }
+      .label { font-size: 11px; }
+      .value { font-size: 28px; margin-top: 8px; }
+      .note,
+      .list,
+      table,
+      td,
+      th { font-size: 13px; }
+      .list { line-height: 1.65; }
+      .chart-title { font-size: 14px; }
+      .chart-box {
+        height: auto;
+        min-height: 220px;
+        padding: 14px 14px 18px;
+      }
+      .chart-box::before { left: 42px; right: 14px; bottom: 28px; }
+      .chart-box::after { left: 42px; top: 40px; bottom: 28px; }
+      .bar-area {
+        left: 56px;
+        right: 16px;
+        bottom: 28px;
+        height: 140px;
+        gap: 10px;
+      }
+      .bar { width: 24px; }
+      .bar-label,
+      .bar-value {
+        font-size: 9px;
+        white-space: normal;
+        width: 42px;
+        text-align: center;
+        line-height: 1.15;
+      }
+      .bar-label { bottom: -32px; }
+      .bar-value { top: -18px; }
+      .section-marker {
+        left: 18px;
+        top: 64px;
+        height: 120px;
+        width: 5px;
+      }
+      .section-wrap {
+        padding-left: 16px;
+        padding-top: 72px;
+      }
+      .section-tag {
+        font-size: 11px;
+        letter-spacing: .18em;
+      }
+      .section-title {
+        font-size: 30px;
+        max-width: none;
+        margin-top: 12px;
+      }
+      .section-desc {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 16px;
+        max-width: none;
+      }
+      .section-no {
+        right: 18px;
+        bottom: 18px;
+        font-size: 24px;
+      }
+      .cover-band {
+        width: 96px;
+        opacity: .9;
+      }
+      .cover-band-2 {
+        width: 56px;
+        right: 24px;
+        top: 52px;
+        bottom: 52px;
+      }
+      .cover-content {
+        width: 100%;
+        padding-top: 64px;
+      }
+      .cover-kicker {
+        font-size: 11px;
+        letter-spacing: .14em;
+      }
+      .cover-title {
+        font-size: 32px;
+        line-height: 1.15;
+      }
+      .cover-desc {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: calc(100% - 84px);
+        margin-top: 18px;
+      }
+      .pill {
+        margin-top: 20px;
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+      .cover [style*="position:absolute"],
+      .slide > [style*="position:absolute"] {
+        max-width: 100%;
+      }
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      tbody, thead, tr { white-space: nowrap; }
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
